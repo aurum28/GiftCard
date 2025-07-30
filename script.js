@@ -1,6 +1,6 @@
 function submitName() {
   const name = document.getElementById('nameInput').value.trim();
-  const allowedNames = ['Ali', 'Sara', 'Hazik', 'Iftikhar', 'Hamza', 'Mubashir', 'Zohaib', 'Taha', 'Muneeb', 'Ibrahim', 'Sami', 'Aisha', 'Usman', 'Amna', 'Fatima', 'Zaibii']; // Add more verified names here
+  const allowedNames = ['Ali', 'Sara', 'Hazik', 'Haris', 'Iftikhar', 'Hamza', 'Mubashir', 'Zohaib', 'Taha', 'Muneeb', 'Ibrahim', 'Sami', 'Aisha', 'Usman', 'Amna', 'Fatima', 'Zaibii']; // Add more verified names here
   const error = document.getElementById('error');
 
   if (name === '') {
