@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Friendship Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="center-box card">
+    <h1>💌 Your Friendship Card 💌</h1>
+    <p class="message">Dear <span id="displayName"></span>,</p>
+    <p id="personalMessage" class="quote"></p>
+  </div>
+
+  <script>
+    const name = localStorage.getItem('friendName');
+    const verified = localStorage.getItem('verified');
+
+    if (verified !== 'yes') {
+      window.location.href = 'index.html';
+    } else {
+      document.getElementById('displayName').textContent = name;
+
+      // Personal messages
+      const messages = {
+        'Ali': "You are the kind of friend who turns ordinary moments into unforgettable memories.",
+        'Sara': "Your kindness and warmth make the world a better place — I’m lucky to call you my friend.",
+        'John': "Through thick and thin, your loyalty has always been inspiring. Never change.",
+        'Aisha': "You bring light wherever you go. Thank you for being the sunshine in my dark days.",
+        'Ahmed': "Friends like you are rare — strong, caring, and true. I'm forever grateful.",
+        'Fatima': "Your friendship is like a warm hug in hard times — always comforting and pure.",
+        'Usman' : "Sorry But You Are Gay"
+      };
+
+      const msg = messages[name] || "Your friendship is a treasure I’ll always cherish.";
+      document.getElementById('personalMessage').textContent = msg;
+    }
+  </script>
+</body>
+</html>
